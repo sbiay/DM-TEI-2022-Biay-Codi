@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="./schema-codi-occ.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="./schema-codi-occ.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title><foreign xml:lang="oco">Lo Codi</foreign> occitan</title>
+            <title type="sub">Édition critique de trois extraits de la somme au Code de Justinien d'après les témoins manuscrits Paris, Sorbonne, 632, Paris, BNF, NAF 4138 et 4504</title>
+            <author>Anonyme</author>
+            <editor><persName xml:id="SBiay"><forename>Sébastien</forename> <surname>Biay</surname></persName></editor>
+            <respStmt>
+               <resp>Encadrement scientifique et technique</resp>
+               <persName><forename>Ségolène</forename> <surname>Albouy</surname></persName>
+            </respStmt>
+            <respStmt>
+               <resp>Auteur des notices codicologiques et des transcriptions utilisées</resp>
+               <persName xml:id="FDuval"><forename>Frédéric</forename> <surname>Duval</surname>, <roleName>professeur de philologie romane à l'<orgName ref="#ENC">École nationale des chartes</orgName></roleName>.</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <authority ref="#SBiay"><forename>Sébastien</forename> <surname>Biay</surname></authority>
+            <date when="2022-02-03">3 février 2022</date>
+            <idno type="URI">https://github.com/sbiay/DM-TEI-2022-Biay-CodiOccitan/blob/main/tei-codi-occ.xml</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <!--Liste des trois témoins -->
+            <listWit>
+               <witness xml:id="A">Paris, Bibliothèque de la Sorbonne, ms. 632 ;</witness>
+               <witness xml:id="B">Paris, Bibliothèque nationale de France, NAF 4138 ;</witness>
+               <witness xml:id="C">Paris, Bibliothèque nationale de France, NAF 4504.</witness>
+            </listWit>
+            <!-- Description détaillée des trois témoins -->
+            <msDesc sameAs="#A" source="#noticeFDcodi">
+               <msIdentifier>
+                  <settlement>Paris</settlement>
+                  <institution xml:id="BIS">
+                     <orgName>Bibliothèque de la Sorbonne</orgName>
+                     <idno type="VIAF">149068766</idno>
+                  </institution>
+                  <repository>Manuscrits médiévaux</repository>
+                  <idno>MS 632</idno>
+                  <msName>Somme sur le Code de Justinien, en provençal</msName>
+                  <altIdentifier>
+                     <idno>A</idno>
+                     <note>Il s'agit du témoin A dans les éditions de <name ref="#edFitting">Fitting</name> et de <name ref="#edDerrer">Derrer</name>.</note>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno type="ark">ark:/15733/kbx8</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno type="facs">https://nubis.univ-paris1.fr/ark:/15733/kbx8</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <head>
+                  <title>Somme sur le Code de Justinien, en provençal </title>
+                  <origDate><date notBefore="1200" cert="medium">1200</date>-<date notAfter="1225" cert="medium">1225</date></origDate>
+               </head>
+               <physDesc>
+                  <objectDesc form="codex">
+                     <supportDesc material="perg">
+                        <support>Parchemin (d’assez bonne qualité, malgré des différences d’épaisseur sensibles d’un f. à l’autre, quelques trous f. 92, 117, coutures f. 58, 61 et briset f. 125. Les f. ont été recoupés ou rognés irrégulièrement dans la marge de queue).</support>
+                        <extent><num>141</num>  feuillets</extent>
+                        <foliation>Double foliotation moderne, une première, fautive et effacée, à la mine de plomb, une seconde à l’encre ; pas de titre courant.</foliation>
+                        <collation>
+                           <formula>1.8 (f. 1-8v), 2.8 (f. 9-16v), 3.8 (f. 17-24v), 4.8 (f. 25-32v), 5.8 (f. 33-40v), 6.8 (f. 41-48v), 7.8 (f. 49-56v), 8.8 (f. 57-64v), 9.8 (f. 65-72v), 10.8 (f. 73-80v), 11.8 (f. 81-88v), 12.8 (f. 89-96v), 13.8 (f. 97-104v [numéro de cahier "xiii" au bas du f. 104v]), 14.8 (f. 105-112v [numéro de cahier "xiiii" au bas du f. 112v]), 15.8 (f. 113-120v [numéro de cahier "xv" au bas du f. 120v]), 16.8 (f. 121-128v [numéro de cahier "xvi" au bas du f. 128v]), 17.8 (f. 129-136v [numéro de cahier "xvii" au bas du f. 136v]), 18.8 (f. 137-144v [numéro de cahier "xviii" au bas du f. 144v]).</formula>
+                        </collation>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="2">Réglure à la mine de plomb (2-2-111/0-0/2-2/J) : d’après le f. 68, (34 + 188 + 65 mm.) x (33 + 54 + 8 + 54 + 57 mm.). Piqûres pour le tracé des lignes verticales parfois apparentes, de même pour la linéation (ex. f. 90). Copié sur deux col., le ms. compte 32 ou, plus souvent, 33 lignes par page, soit une <choice><expan resp="#SBiay">unité de réglure</expan><abbr>UR</abbr></choice> moyenne oscillant entre 5,69 et 5,87 mm. La première ligne est copiée au-dessus du trait délimitant l’extrémité supérieure de la justification.
+                           <dimensions type="layout">
+                              <height unit="mm">297</height>
+                              <width unit="mm">206</width>
+                           </dimensions>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc hands="1" cert="high">
+                     <handNote>Un seul copiste pour le texte et les rubriques. Coefficient d’abréviation : 12,3% (11,2% sans "ed"). Afin d’optimiser la mise en page, le copiste adopte plusieurs procédés : 
+                        <list>
+                           <item n="1">Il copie volontiers un ou plusieurs mots alignés à droite sous la dernière ligne de la colonne. Ces entorses à la justification sont soulignées par un décor rouge et bleu ;</item>
+                           <item n="2">Lorsque la rubrique est trop longue, la fin est copiée perpendiculairement au texte en marge.</item></list>
+                        La copie a fait l’objet d’une relecture attentive. Les suppressions sont faites par grattage ou par exponctuation. Nombreuses insertions marginales, d’ordinaire encadrées de rouge, ou bien corrections sur grattage. Le réviseur du manuscrit a ajouté deux longues gloses latines f. 52v et f. 143v, commentées par Gouron 1985. La première cite des extraits de D. 21.2. La seconde expose les diverses formes de violation des immunités ecclésiastiques ainsi que le droit d’asile en terre d’Eglise. Cette glose encadrante du f. 143v, aujourd’hui partiellement effacée, a été transcrite par Derrer 1974, p. 253-255.
+                     </handNote>
+                  </handDesc>
+                  <scriptDesc>
+                     <p><foreign xml:lang="lat">Textualis libraria</foreign> régulière.</p>
+                  </scriptDesc>
+                  <decoDesc>
+                     <p>Le <locus facs="https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0009/full/2000,2000/0/default.jpg">début du texte</locus> est signalé par un O initial de 8 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice> formé de deux dragons se mordant mutuellement la queue. A l’intérieur du O, un homme que les dragons tiennent dans leurs griffes. Homme et dragons sont dessinés à l’encre rouge et brune. Le fond de la lettre est bleu, rehaussé d’un semi de trois points. Double bordure rouge et réserve. Prolongement marginal rouge et bleu qui se déploie dans la marge de queue. A droite de l’initiale, dans la partie de la colonne restée libre pour le texte, incipit en lettres d’apparat filigranées alternativement rouges et bleues.</p>
+                     <p>La division en livres est peu marquée. Le passage d’un livre à l’autre est annoncé, pour les livres 3, 5-9 par une mention rubriquée du type "Libre .viii.", précédant sans saut de ligne l’intitulé, toujours rubriqué, du premier titre.</p>
+                     <p>La division en titres est signalée par : 
+                        <list>
+                           <item n="1">Une rubrique incluant l’intitulé du titre ;</item>
+                           <item n="2">Une initiale de 2 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice> alternativement rouge à filigrane bleu et bleue à filigrane rouge.</item>
+                        </list>
+                        Assez souvent, les initiales se prolongent sous forme d’antennes rouges et bleues à motif végétaux ou géométriques dans les marges. Les titres sont divisés en paragraphes par des pieds-de-mouche alternativement rouges et bleus, dont la partie supérieure se prolonge dans l’interligne.</p>
+                  </decoDesc>
+                  <bindingDesc>
+                     <binding>
+                        <p>Demie-reliure moderne parchemin avec plats de carton.</p>
+                        <p>Pièce de titre estampée à chaud au dos : <title>Abrege<lb/>du Code<lb/>Justinien<lb/>en provencal</title>.</p>
+                        <p>3 f. de garde papier moderne et 3 f. de garde papier moderne. Le f. 144 était a fait à l’origine office de f. de garde parchemin.</p>
+                     </binding>
+                  </bindingDesc>
+               </physDesc>
+               <history>
+                  <origin> 
+                     <origPlace resp="Pfister">France méridionale, Sud-Est : <placeName>Auvergne</placeName> ou <placeName>vallée du Rhône</placeName></origPlace>, d’après <bibl>Pfister</bibl>, p. 295 ; <origPlace resp="Grafström"><placeName>vallée du Rhône</placeName> et notamment <placeName>Valentinois</placeName></origPlace> d’après <bibl>Grafström, p. 167</bibl>.
+                     <origDate><date notBefore="1200" cert="medium">1200</date>-<date notAfter="1225" cert="medium">1225</date>. <note>Fourchette proposée par <bibl>Careri et alii</bibl> ; d’après la glose du f. 143v, qui résume quelques passages de la <title>Summa Decreti</title> de <persName>Rufin</persName>, mais ignore celle d’<persName>Etienne de Tournai</persName>, <bibl>Gouron, p. 3</bibl>, date la rédaction de la glose et donc du ms. ca <date when="1165" cert="medium">1165</date>.</note></origDate>
+                  </origin>
+                  <provenance>
+                     Un quatrain a été ajouté au f. 144 :
+                     <q>
+                        <lg type="quatrain" xml:lang="lat">
+                           <l>Gemma Navarrorum, cor nobile flos puerorum,</l>
+                           <l>mens pia vas morum jacet hic exemplar honorum,</l>                                                  <l>Transit in flore flos integer absque timore,</l>
+                           <l>non hominum more celi recreatus odore. Amen.</l>
+                        </lg>
+                     </q>
+                     <persName ref="#FDerrer">F. Derrer</persName> a proposé d’y voir une allusion à <persName>Marguerite de Navarre</persName>, ce qui le conduit à l’hypothèse que le manuscrit appartenait dès le 16e s. soit à la famille <persName>Chastenet de Puységur</persName> soit à <persName>Jean-Jacques de Mesles</persName>. Ces considérations sont à rejeter puisque le quatrain a sans doute été copié au 14e s. <persName>P. Ourliac</persName> <note>(1974, p. 600)</note> y voyait <quote>une écriture très personnelle, difficile à dater, peut-être du début du 14e siècle</quote> . D’après lui, il pourrait s’agir d’une allusion au <orgName>Collège de Navarre</orgName>. Le ms. a intégré la <orgName>bibliothèque de la Sorbonne </orgName>en 1816, à partir de la collection d’<persName>Armand-Marie-Jacques de Chastenet de Puységur</persName> (1752-1825). Le ms. est cité par <bibl>Chatelain 1885</bibl>, d’après le ms. <objectName>Paris, bibl. de l’Arsenal, 6512</objectName> (<bibl>t. 20 des Archives des dépôts littéraires</bibl>), f. 211-211v, qui le présente comme <quote>Loix anciennes écrites en langue vulgaire, sur vélin, in 4°</quote>.
+                  </provenance>
+               </history>
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>Outre les informations glanées dans la <bibl corresp="#noticeFDcodi">notice établie par F. Duval</bibl>, on pourra consulter la notice du ms. sur le site Calames :
+                           <biblStruct xml:id="msA-Calames">
+                              <analytic>
+                                 <title>Somme sur le Code de Justinien, en provençal</title>
+                              </analytic>
+                              <monogr>
+                                 <title>Calames : catalogue en ligne des archives de l'enseignement supérieur</title>
+                                 <edition></edition>
+                                 <imprint>
+                                    <pubPlace>Montpellier</pubPlace>
+                                    <publisher>
+                                       <name>Agence Bibliographique de l’Enseignement Supérieur (Abes)</name>
+                                       <idno type="VIAF">128719505</idno>
+                                    </publisher>
+                                    <date type="publicationDate" when="2007"></date>
+                                    <date type="consultationDate" when="2021-12-03">03/12/2021</date>
+                                    <biblScope>
+                                       <idno type="URI">http://www.calames.abes.fr/pub/ms/UNIA11454</idno>
+                                    </biblScope>
+                                 </imprint>
+                              </monogr>
+                           </biblStruct>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
+            </msDesc>
+            <msDesc sameAs="#B">
+               <msIdentifier>
+                  <settlement>Paris</settlement>
+                  <institution xml:id="BNF">
+                     <orgName>Bibliothèque nationale de France</orgName>
+                  </institution>
+                  <repository>Département des manuscrits</repository>
+                  <idno>nouv. acq. fr. 4138</idno>
+                  <msName>Abrégé des neuf premiers livres du Code de Justinien, en provençal</msName>
+                  <altIdentifier>
+                     <idno>Regius 8164, 2</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>ark:/12148/cc40141s</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>B</idno>
+                     <note>Il s'agit du témoin B dans les éditions de <name ref="#edFitting">Fitting</name> et de <name ref="#edDerrer">Derrer</name>.</note>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc form="codex">
+                     <supportDesc material="perg">
+                        <support>parchemin</support>
+                        <extent><num resp="#msBbnfAM" cert="medium">104</num> ou <num resp="#noticeFDcodi" cert="high">110</num> feuillets</extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="2">Texte établi sur 2 colonnes.
+                           <dimensions type="layout">
+                              <height unit="mm">222</height>
+                              <width unit="mm">160</width>
+                           </dimensions>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <bindingDesc>
+                     <binding>
+                        <p>Reliure en maroquin rouge, aux armes du roi.</p>
+                     </binding>
+                  </bindingDesc>
+               </physDesc>
+               <history>
+                  <provenance source="#noticeFDcodi">
+                     <origPlace>Composé en <placeName>France méridionale</placeName> (<placeName>Languedoc</placeName> ?)</origPlace>, 
+                     <origDate>entre <date notBefore="1250" cert="medium">1250</date> et <date notAfter="1300" cert="medium">1300</date>.</origDate>
+                  </provenance>
+               </history>
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           Sauf mention particulière, les informations contenues dans la notice sont issues de :
+                           <biblStruct xml:id="BNF-AM-naf4138">
+                              <analytic>
+                                 <title>NAF 4138</title>
+                                 
+                              </analytic>
+                              <monogr>
+                                 <title>BnF Archives et Manuscrits</title>
+                                 <edition>version 10.1.0</edition>
+                                 <imprint>
+                                    <pubPlace>Paris</pubPlace>
+                                    <publisher ref="#BNF">Bibliothèque nationale de France</publisher>
+                                    <date type="publicationDate" when="2007"/>
+                                    <date type="consultationDate" when="2021-12-03">03/12/2021</date>
+                                    <biblScope>
+                                       <idno type="URI">https://archivesetmanuscrits.bnf.fr/ark:/12148/cc40141s</idno>
+                                    </biblScope>
+                                 </imprint>
+                              </monogr>
+                           </biblStruct>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
+            </msDesc>
+            <msDesc sameAs="#C">
+               <msIdentifier>
+                  <settlement>Paris</settlement>
+                  <institution ref="#BNF">
+                     <orgName>Bibliothèque nationale de France</orgName>
+                  </institution>
+                  <repository>Département des manuscrits</repository>
+                  <idno>nouv. acq. fr. 4504</idno>
+                  <msName>Abrégé, en provençal, des neuf premiers livres du Code de Justinien</msName>
+                  <altIdentifier>
+                     <idno>ark:/12148/cc40394w</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>C</idno>
+                     <note>Il s'agit du témoin C dans les éditions de <name ref="#edFitting">Fitting</name> et de <name ref="#edDerrer">Derrer</name>.</note>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc form="codex">
+                     <supportDesc material="perg">
+                        <support>Parchemin</support>
+                        <extent><num>185</num> feuillets précédés d’1 f. de garde papier moderne et d’une ancienne couvrure parchemin et suivis d’1 ancienne couvrure parchemin et d’1 f. de garde papier moderne.</extent>
+                        <foliation>Foliotation ancienne en chiffres romains, de peu postérieure à la copie, à l’encre dans le coin supérieur gauche des f. verso et valant pour la double-page ; foliotation moderne en chiffres arabes dans le coin supérieur droit des f. recto ; titre courant à l’encre rouge centré dans la marge de tête, au verso, début du nombre en latin (ex. <q>secun</q>), au recto la fin (ex. <q>dus</q>).</foliation>
+                        <collation>
+                           <formula>1.8 (f. 1-8v), 2.8 (f. 9-16v), 3.8 (f. 17-24v), 4.8 (f. 25-32v), 5.8 (f. 33-40v), 6.8 (f. 41-48v), 7.8 (f. 49-56v), 8.8 (f. 57-64v), 9.8 (f. 65-72v), 10.8 (f. 73-80v), 11.8 (f. 81-88v), 12.8 (f. 89-96v), 13.8 (f. 97-104v), 14.8 (f. 105-112v), 15.8 (f. 113-120v), 16.8 (f. 121-128v), 17.8 (f. 129-136v), 18.8 (f. 137-144v), 19.8 (f. 145-152v), 20.8 (f. 153-160v), 21.8 (f. 161-168v), 22.8 (f. 169-176v), 23.9 (4+5) (f. 177-185v).</formula>
+                        </collation>
+                        <condition>Qualité médiocre : brisets f. 27, 30, 88, 164 ; oeil f. 59, 60, 61, 100, 118, 181.</condition>
+                        
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="2">Texte établi sur 2 colonnes.
+                           <dimensions type="layout">
+                              <height unit="mm">230</height>
+                              <width unit="mm">155</width>
+                           </dimensions>
+                           <p>Réglure à la mine de plomb (2-2/0/3-3/J avec quelques variantes 2.2/0/3-2/J f. 71 et 2.2/0/3-4/J f. 169) : d’après le f. 115, (17 + 155 + 58 mm.) x (16 + 98 + 41 mm.). Piqûres pour le tracé des lignes verticales et pour la linéation presque toujours apparentes. Copié à longues lignes, le ms. compte de 27 (f. 1) à 38 lignes (f. 9) par page, la plupart des pages comptant entre 31 et 33 lignes par page, soit une <choice><expan resp="#SBiay">unité de réglure</expan><abbr>UR</abbr></choice> moyenne oscillant entre 4,7 et 5 mm. La première ligne est copiée sous le trait délimitant l’extrémité supérieure de la justification. Par endroits, le texte est effacé et quasiment illisible.</p>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <scriptDesc>
+                     <p>Copié en <foreign xml:lang="lat">semitextualis</foreign> méridionale par <persName xml:lang="lat">Petrus de Sancta Anastasia</persName> (cf. colophon <q xml:lang="lat">Petrus de sancta Anastasia scripsit librum istum</q> f. 185 ; répertorié dans <bibl>Bouveret 15892</bibl>). Le toponyme renvoie sans doute à <placeName>Sainte-Anastasie-sur-Issole (Var)</placeName> [pour <bibl>Ourliac 1974, p. 601</bibl>, pourrait dénommer plutôt <placeName>Sainte-Anastasie dans le Gard, arr. Uzès</placeName>, notamment à cause du traitement de l (<q>cosel</q>), qui fait penser à la région de <placeName>Nîmes</placeName>]. Le copiste a également fait office de rubricateur. C’est également la même main qui a indiqué en rouge dans les marges les références synoptiques.</p>
+                     <p>Outre le corps du texte, ce ms. du <title ref="#Codi" xml:lang="oco">Codi</title> présente, de la main du copiste :
+                        <list>
+                           <item n="1">Des renvois marginaux rubriqués (ex. "in eodem libro cp. viii") très nombreux, surtout dans la première partie du volume ; </item>
+                           <item n="2">Des gloses : soit copiées en marge en petit module à l’encre noire ou brune (ex. f. 2, 3, 48v ,49, 56v, 57...) ; soit copiées dans le même module que le corps du texte et empiétant sur la justification (f. 65, 66, 66v).</item>
+                        </list>
+                        Cette dernière solution est plus rare. Dans les deux cas, les gloses ont été copiées lors de la confection du manuscrit.</p>
+                  </scriptDesc>
+                  <decoDesc>
+                     <p>Le début du texte est signalé par une initiale rouge de 8 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice> filigranée à l’encre brune.</p>
+                     <p>La division en livres n’est pas marquée de façon très homogène. Le passage d’un livre à l’autre est annoncé par : 
+                        <list>
+                           <item n="1">Une mention rubriquée du type "Liber .viii." précédant l’intitulé, toujours rubriqué, du premier titre ;</item> 
+                           <item n="2">La modification du titre courant ;</item> 
+                           <item n="3">Une manchette formant cartouche ou non, indiquant à l’encre noire le début des livres 2, 6-9, du type "incipit liber secundus" ;</item> 
+                           <item n="4">Une initiale rouge : livre 2 (f. 5v) initiale nue de 2 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice> ; livre 3 (f. 18v), initiale filigranée de 6 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice> à décor d’oiseaux et de tête d’homme à l’encre rouge ; livres 4 et 5 (f. 33 et 70), initiale de 4 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice> au décor très sommaire de tête humaine ; livre 6 (f. 86v), initiale nue de 4 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice> à prolongement géométrique ; livres 7 et 8 (f. 124v et 145v), initiale nue de 5 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice> à prolongements de décor géométrique. L’initiale du livre 8 est décorée d’un filigrane à l’encre brune ; livre 9 (f. 176), lettre nue de 4 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice>.</item>
+                        </list>
+                     </p>
+                     <p>La division en titres est signalée par : 
+                        <list>   
+                           <item n="1">Une rubrique incluant l’intitulé du titre généralement suivi de son numéro d’ordre dans le livre ;</item> 
+                           <item n="2">Une initiale nue rubriquée de 2 <choice><expan resp="#SBiay">unités de réglure</expan><abbr>UR</abbr></choice>.</item>
+                        </list>
+                     </p>
+                     <p>Les titres sont divisés en paragraphes par des pieds-de-mouche rouges rapidement tracés. Les paragraphes sont nettement structurés par des initiales rouges qui rythment la page.</p>
+                  </decoDesc>
+                  <bindingDesc>
+                     <p source="#noticeFDcodi">Reliure (<date>19e s.</date>) en carton épais (ou bois ?) recouvert de basane.</p>
+                     <p source="#BNF-AM-naf4504">Reliure en bois, avec dos en cuir.</p>
+                  </bindingDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace resp="Brunel">France méridionale (<placeName>Provence</placeName></origPlace>, d’après <bibl>Brunel, n° 229, p. 68</bibl> et d’après le colophon) <origDate><date notBefore="1225">1225</date>-<date notAfter="1275">1275</date></origDate> (<origDate resp="Ourliac">début du 13e s.</origDate> d’après l’écriture pour <bibl>P. Ourliac 1974, p. 599</bibl>)
+                  </origin>
+                  <provenance>
+                     <persName>Connétable de Lesdiguières</persName> († 1626) et <persName>famille de Lesdiguières</persName> (mention propria f. 185v), dont la collection fut achetée d’un bloc par l’<orgName>abbaye de Marmoutier</orgName> en 1716. En 1733 la bibliothèque de Marmoutier passe à la <orgName>bibliothèque de la ville de Tours</orgName> (correspondrait au n°4 de l’<bibl>inventaire des mss de Lesdiguières dressé en 1633</bibl> : <q>Le decretalus en françoys, manuscript sans date</q>, malgré le titre <note>cf. Meyer, p. 338</note>, où le ms. est volé par <persName>Libri</persName> (= n° 101 du <bibl>catalogue Libri</bibl>), qui le vend à <persName>Ashburnham</persName>, avant qu’il n’intègre les collections de la <orgName ref="#BNF">Bibliothèque nationale</orgName>.
+                  </provenance>
+               </history>
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           Outre les informations glanées dans la <bibl corresp="#noticeFDcodi">notice établie par F. Duval</bibl>, on pourra consulter la notice du ms. dans :
+                           <biblStruct xml:id="BNF-AM-naf4504">
+                              <analytic>
+                                 <title>NAF 4504</title>
+                              </analytic>
+                              <monogr>
+                                 <title>BnF Archives et Manuscrits</title>
+                                 <edition>version 10.1.0</edition>
+                                 <imprint>
+                                    <pubPlace>Paris</pubPlace>
+                                    <publisher ref="#BNF">Bibliothèque nationale de France</publisher>
+                                    <date type="publicationDate" when="2007"/>
+                                    <date type="consultationDate" when="2021-12-20">20/12/2021</date>
+                                    <biblScope>
+                                       <idno type="URI">https://archivesetmanuscrits.bnf.fr/ark:/12148/cc40394w</idno>
+                                    </biblScope>
+                                 </imprint>
+                              </monogr>
+                           </biblStruct>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
+            </msDesc>
+            <biblStruct xml:id="noticeFDcodi">
+               <analytic>
+                  <title ref="#Codi"><foreign xml:lang="oco">Lo Codi</foreign> occitan</title>
+               </analytic>
+               <monogr>
+                  <title ref="#MiroirClassiques">Miroir des Classiques</title>
+                  <imprint>
+                     <biblScope unit="chapter"><title>Codex, Justinianus I</title> (URI :
+                        <idno type="URI">http://elec.enc.sorbonne.fr/miroir_des_classiques/xml/manuscrits_juridiques/codex_justinianus.xml</idno>
+                        ),
+                     </biblScope>
+                     <biblScope unit="part">sous l'onglet <title>Sommes au Code</title></biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>La présente édition partielle du <title ref="#Codi"><foreign xml:lang="oco">Codi</foreign> occitan</title> se fonde sur une sélection de trois témoins manuscrits (<ref type="wit" target="#A">A</ref>, <ref type="wit" target="#B">B</ref> et <ref type="wit" target="#C">C</ref>), transcrits par les soins de <name ref="#FDuval">Frédéric Duval</name> à partir de quelques chapitres des livres 3, 5 et 6 (pour un total de 22 paragraphes correspondant environ à 5 feuillets de transcription) et publiés dans la ressource électronique <title ref="#MiroirClassiques">Miroir des Classiques</title>, au sein de la notice <title ref="#noticeFDcodi"><foreign xml:lang="oco">Lo Codi</foreign> occitan</title>.</p>
+         </projectDesc>
+         <editorialDecl>
+            <p>Il s'agit d'une édition critique de type bédiériste, fondée sur un manuscrit de base considéré comme le <q>meilleur manuscrit</q>, qui coïncide en l'occurrence avec le témoin le plus ancien de la tradition manuscrite, copié en outre par un scribe faisant très peu de fautes de copie : le témoin <ref target="#A">A</ref>.</p>
+            <p>Pour l'apparat, le choix a été fait d'une présentation positive, donnant une vision plus complète de la <foreign xml:lang="lat">varia lectio</foreign> sur l'ensemble des témoins.</p>
+            <p>Il a été procédé à une sélection des variantes. Dans la mesure où les variantes graphiques entre les témoins sont particulièrement nombreuses, et face à la difficulté d'établir qu'elles seraient les variantes graphiques pertinentes sur le plan de la langue écrite (variantes scriptologiques), nous avons choisi de ne pas retenir toutes ces variantes graphiques, que leur origine soit scriptologique où qu'elle tienne au scribe lui-même (variantes adiaphores).</p>
+            <p>La sélection des variantes répond à deux critères :
+               <list>
+                  <item n="1">Renseigner avec précision la graphie des concepts juridiques qui forment la colonne vertébrale du texte et son intérêt historique. Toutes les variantes graphiques ont donc été retenue pour ceux-ci ;</item>
+                  <item n="2">Fournir les informations nécessaires à l'histoire de la copie du texte et à l'établissement d'un <foreign xml:lang="lat">stemma codicum</foreign> : nous avons par conséquent retenu toutes les leçons fautives et toutes les lacunes recensées dans les différents témoins.</item>
+               </list>
+            </p>
+            <correction>
+               <p>Les leçons fautives ou lacunaires ont été corrigées à l’aide des leçons attestées dans le reste de la tradition manuscrite, en particulier le témoin <ref target="#B">B</ref>, qui présente des caractères linguistiques proches de <ref target="#A">A</ref>. <ref target="#B">B</ref> présente en outre beaucoup moins de fautes de copies que <ref target="#C">C</ref>.</p>
+               <p>Nous avons reproduit une réfection <foreign xml:lang="lat">ex ingenio</foreign> proposée par <persName ref="FDuval">F. Duval</persName> lors d'une correction du manuscrit de base par le manuscrit de contrôle <ref target="#B">B</ref> : les éléments <gi>orig</gi> et <gi>reg</gi> ont alors été employés, avec l'attribut <att>resp</att> pour ce dernier.</p>
+            </correction>
+            <normalization>
+               <p>Les <ref target="#noticeFDcodi">transcriptions</ref> réalisées par <persName ref="#FDuval">F. Duval</persName>, de type diplomatique, ont été transformées par nos soins d’après des critères éditoriaux interprétatifs. Nous avons en effet privilégié une édition interprétative du texte afin de ne pas doublonner l'édition diplomatique de <persName ref="#FDuval">F. Duval</persName> d'une part, et dans le souci de limiter la complexité de l'encodage à la sélection des variantes d'autre part, là où la résolution des nombreuses abréviations que présente le manuscrit de base aurait fortement alourdi l'encodage. Ce choix s'inscrit également parmi les préconisations pour l'édition des textes littéraires formulées dans 
+                  <biblStruct>
+                     <monogr>
+                        <title>Conseils pour l'édition des textes médiévaux, fascicule 1 : Conseils généraux</title>
+                        <editor ref="#ENC">École nationale des chartes</editor>
+                        <imprint>
+                           <pubPlace>Paris</pubPlace>
+                           <publisher>CTHS-ENC</publisher>
+                           <date when="2005">2005</date>
+                        </imprint>
+                     </monogr>
+                  </biblStruct>.</p>
+               <p>Ainsi, nous avons effectué les interventions suivantes sans les encoder :
+                  <list>
+                     <item>La normalisation des allographes u/v et i/j ;</item>
+                     <item>L'utilisation de la cédille pour restituer la prononciation de <foreign xml:lang="oco">aço</foreign> ;</item>
+                     <item>La modernisation de la ponctuation et la suppression des pieds de mouche ;</item>
+                     <item>La modernisation de l'emploi des majuscules en adéquation avec la ponctuation modernisée ;</item>
+                     <item>L'usage des apostrophes déjà appliqué par <persName ref="#FDuval">F. Duval</persName> dans son <ref target="#noticeFDcodi">édition diplomatique</ref> a naturellement été maintenu.</item>
+                  </list>
+               </p>
+            </normalization>
+         </editorialDecl>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+         <classDecl>
+            <taxonomy>
+               <biblStruct>
+                  <analytic>
+                     <title>Liste des codes ISO 639-2</title>
+                     <idno type="URI">https://www.classicistranieri.com/fr/articles/l/i/s/Liste_des_codes_ISO_639-2_7abc.html</idno>
+                  </analytic>
+                  <monogr>
+                     <title>Wikipédia, l'encyclopédie libre</title>
+                     <imprint>
+                        <publisher>Fondation Wikimédia</publisher>
+                        <pubPlace>St. Petersburg (Floride)</pubPlace>
+                     </imprint>
+                  </monogr>
+                  <note>En l'absence de code spécifique pour l'ancien occitan, nous lui avons attribué le code <abbr>oco</abbr> (pour <foreign xml:lang="eng">old occitan</foreign>).</note>
+               </biblStruct>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc source="#noticeFDcodi">
+         <creation><title xml:id="Codi" xml:lang="oco">Lo Codi</title> (<date notBefore="1149">1149</date>-<date notAfter="1160" cert="medium">ca 1160</date>) est un exposé systématique de droit romain en occitan se présentant comme une somme des neuf premiers livres du <title>Code de Justinien</title> dont il suit le plan, selon la méthode la <foreign xml:lang="lat">continuatio titulorum</foreign>, ce qui ne l’empêche pas de puiser divers éléments à d’autres parties du <title xml:lang="lat">Corpus juris civilis</title>. Les conditions de rédaction du <title ref="#Codi">Codi</title> ont fait l’objet de nombreux débats qui ne sont pas totalement clos. On doit admettre que le <title ref="#Codi">Codi</title> a été rédigé entre <date notBefore="1149">1149</date> (date du second siège victorieux de <placeName>Fraga</placeName>, auquel il est fait allusion en 6.45.1) et <date notAfter="1160" cert="medium">ca 1160</date>. Le <foreign xml:lang="lat">terminus ad quem</foreign> s’explique par l’emprunt au <title ref="#Codi">Codi</title> dans une assise sur l’exhérédation promulguée par <persName>Baudouin III de Jérusalem</persName>, mort en <date when="1162-02">février 1162</date>. Quant à son origine géographique, Fitting penchait pour <origPlace resp="Fitting">Arles</origPlace>, Ourliac pour <origPlace resp="Ourliac">Montpellier</origPlace> et Gouron pour <origPlace resp="Gouron" cert="high">Saint-Gilles</origPlace>, la dernière hypothèse semblant la plus probable. L’auteur ou les auteurs restent méconnus malgré plusieurs hypothèses. H. Fitting a soutenu que le compilateur était à chercher dans l’entourage des <persName>seigneurs de Baux</persName>, sans convaincre R. Feenstra ou P. Ourliac. A. Gouron (2002) a tenté d’aller plus loin en attribuant le <title ref="#Codi">Codi</title> à <persName><name>Raoul</name>, <roleName>chancelier de Saint-Gilles</roleName></persName>, mais ses arguments ne sont pas définitifs.
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <head><foreign xml:lang="oco">Lo Codi</foreign> : édition critique de trois extraits d'après les témoins <ref type="wit" target="#A">A</ref>, <ref type="wit" target="#B">B</ref> et <ref type="wit" target="#C">C</ref></head>
+         <div type="book" n="3" xml:id="Codi_3">
+            <head>Livre 3</head>
+            <pb n="18r" facs="https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0043/full/2000,2000/0/default.jpg"/>
+            <div type="chapter" n="3.1" xml:id="Codi_3.1">
+               <head xml:id="Codi_3.1.r" type="rubric" rend="red"><label>3.1</label><app type="substantive"><lem wit="#A #C"/><rdg wit="#B">Aici ditz</rdg></app>De.lz <app type="orthographic"><lem wit="#A #B">juizis</lem><rdg wit="#C">judicis</rdg></app> e <cb n="b"/> d’aquelz omes qui podunt donar <app type="orthographic"><lem wit="#A #B">juizi</lem><rdg wit="#C">judici</rdg></app> ses <app type="orthographic"><lem wit="#A">fermanza</lem><rdg wit="#B #C">fermansa</rdg></app>.</head>
+               <p xml:id="Codi_3.1.1"><label>3.1.1</label><hi rend="drop_cap">P</hi>oiss que nos avem dig de sobre d’aquellas causas que sunt obs e.l <app><lem wit="#A">judizis</lem><rdg wit="#B">juizis</rdg><rdg wit="#C">judicis</rdg></app>, si cum es de <foreign xml:lang="lat" cert="high">edendo</foreign>, zo es de manifestar ad altre per cal radon el lo vol metre em <app type="orthographic"><lem wit="#A">plaig</lem><rdg wit="#B">plaitz</rdg><rdg wit="#C">platz</rdg></app>, ed de <foreign xml:lang="lat" cert="high"><app><lem wit="#A #B">in ius</lem><rdg wit="#C"/></app> vocando</foreign>, zo es de clamar em <app type="orthographic"><lem wit="#A">plaig</lem><rdg wit="#B">plait</rdg><rdg wit="#C">platz</rdg></app> omen, e poiss que nos avem dig de.ls arbitres, zo es d'aquellas personas que receubon <app type="orthographic"><lem wit="#A">fermanzas</lem><rdg wit="#B">fermansas</rdg><rdg wit="#C">fermansa</rdg></app> de <app type="orthographic"><lem wit="#A">plaig</lem><rdg wit="#B">plait</rdg><rdg wit="#C">platz</rdg></app> ni non ant autra <app type="orthographic"><lem wit="#A">jurisdicion</lem><rdg wit="#B">juridiction</rdg><rdg wit="#C"><foreign  xml:lang="lat" cert="unknown">juris distictions</foreign></rdg></app>, zo es altra poestat, aras digam d'aquellas personas que an poestat que podunt destreiner omes em <app type="orthographic"><lem wit="#A">plaig</lem><rdg wit="#B">plait</rdg><rdg wit="#C">platz</rdg></app>, que fazon radon l'us a l'autre, e <app type="substantive"><lem wit="#A #B">qui</lem><rdg wit="#C"/></app> podunt donar <app type="orthographic"><lem wit="#A">judizi</lem><rdg wit="#B #C">judici</rdg></app> ses nuilla <app type="orthographic"><lem wit="#A">fermanza</lem><rdg wit="#B #C">fermansa</rdg></app>. Mas aquel de sobre es appellaz arbitres et aquest es appellaz <app type="orthographic"><lem wit="#A">jutgues</lem><rdg wit="#B">judicis</rdg><rdg wit="#C">judices</rdg></app>.</p>
+               <p xml:id="Codi_3.1.2"><label>3.1.2</label>Primeirament deu esser esgardaz que es judicium, ed en cal forma <app type="substantive"><lem wit="#C">et en qual razon</lem><rdg wit="#A #B"/></app> ed en cal mesura el deu esser ordenaz, ed entro a cal termini el durara poiss que el er comenzaz, e cal poestat e cal valor el a.</p>
+               <p xml:id="Codi_3.1.3"><label>3.1.3</label>Li <app type="substantive"><lem wit="#A #B">jutgues</lem><rdg wit="#C"><sic>judicium</sic></rdg></app> a tant de differencia de l’arbitre <app type="substantive"><lem wit="#A #C"/><rdg wit="#B">so es ordenatz</rdg></app> que li <app type="substantive"><lem wit="#A #B">jutgues</lem><rdg wit="#C"><sic>judicium</sic></rdg></app> se fai <app type="substantive"><lem wit="#A #B">per <foreign xml:lang="lat" cert="unknown">publial persona</foreign></lem><rdg wit="#C" cause="dittography"><sic>publiar per persona</sic></rdg></app>, zo es per cuminal poestat, e li arbitres se fai per privada persona. <app type="substantive"><lem wit="#A #C">Aregers</lem><rdg wit="B">Atressi</rdg></app> altra differencia i es car en <pb n="18v" facs="https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0044/full/2000,2000/0/default.jpg"/><cb n="a"/> l’arbitre, si om non vol atendre la soa sentencia, li arbitres non l'en pot destreiner si non per la 
+                  <app type="substantive">
+                     <rdgGrp type="orthographic">
+                        <lem wit="#A">pignora</lem>
+                        <rdg wit="#B">peniora</rdg>
+                     </rdgGrp>
+                     <rdg wit="#C"><sic>pena</sic></rdg>
+                  </app>, o per la <app type="substantive"><lem wit="#A #B">pena</lem><rdg wit="#C"><sic>peiora</sic></rdg></app> si il li es promessa, o per la <app type="orthographic"><lem wit="#A">fermanza</lem><rdg wit="#B #C">fermansa</rdg></app> si cum es dig de sobre. Mas si <app type="orthographic"><lem wit="#A">jutgues</lem><rdg wit="#B">jutges</rdg><rdg wit="#C">juges</rdg></app> dona sentencia ed om no la vol atendre, el l'en pot destreiner, ancara non aia el ni <app type="orthographic"><lem wit="#A">pignora</lem><rdg wit="#B">peniora</rdg><rdg wit="#C"><sic>peiora</sic></rdg></app> ni <app type="substantive"><lem wit="#B #C">fermansa</lem><rdg wit="#A">fidanza</rdg></app>, ni non i sia promessa pena.</p>
+               <p xml:id="Codi_3.1.4"><label>3.1.4</label>La mesura e la forma deu esser gardada ed en lo comenzament de.l <app type="orthographic"><lem wit="#A">judizi</lem><rdg wit="#B">juizi</rdg><rdg wit="#C">judici</rdg></app> ed en la fin. <app type="substantive"><lem wit="#A #C">Aregers</lem><rdg wit="#B">Atressi</rdg></app> deu esser esgardada li persona de.l <app type="orthographic"><lem wit="#A">jutgues</lem><rdg wit="#B">jutge</rdg><rdg wit="#C">juge</rdg></app> ed aquill de l'actor ed aquill de.l reu. <app type="substantive"><lem wit="#A #C">Aregers</lem><rdg wit="#B">Atressi</rdg></app> la causa deu esser esgardada dun es lo <app type="orthographic"><lem wit="#A">plaz</lem><rdg wit="#B">plaitz</rdg><rdg wit="#C">platz</rdg></app>.</p>
+            </div>
+            <div type="chapter" n="3.2" xml:id="Codi_3.2">
+               <head xml:id="Codi_3.2.r" type="rubric" rend="red"><label>3.2</label><app type="substantive"><lem wit="#A"/><rdg wit="#B #C">Aici ditz</rdg></app>Qui pot esser <app type="orthographic"><lem wit="#A #B">jutges</lem><rdg wit="#C">juges</rdg></app> e qui non. <app type="substantive"><lem wit="#A #B"/><rdg wit="#C"><foreign xml:lang="lat" cert="high">Capitola</foreign> ii</rdg></app></head>
+               <p xml:id="Codi_3.2.1"><label>3.2.1</label>Li <app type="orthographic"><lem wit="#A">jutgues</lem><rdg wit="#B">jutges</rdg><rdg wit="#C">juges</rdg></app> deu esser tals persona que el non en posca esser gitaz per natura ni per <app type="orthographic"><lem wit="#A">dreig</lem><rdg wit="#B">dreit</rdg><rdg wit="#C">dretz</rdg></app>. Aquill en sunt gitat per natura qui sunt menor de .xxv. anz, aissi cum ill <app type="substantive"><lem wit="#A #B">non</lem><rdg wit="#C"/></app> podunt esser arbitre. <app type="substantive"><lem wit="#A #C">Aregers</lem><rdg wit="#B">Atressi</rdg></app> aquel qui sunt mut o sort en son gitat per natura. E per <app type="orthographic"><lem wit="#A">drei</lem><rdg wit="#B">dreit</rdg><rdg wit="#C">drerts</rdg></app> en sunt gitat <app type="substantive"><lem wit="#B"/><rdg wit="#A" cause="homeoteleuton"><sic>per natura</sic></rdg></app> femenas e servs ed aquel qui sunt <foreign xml:lang="lat" cert="high"><app type="orthographic"><lem wit="#A #B">infames</lem><rdg wit="#C" cause="haplography">famis</rdg></app></foreign>, zo sunt aquill qui sunt desleialat.</p>
+            </div>
+         </div>
+         <div type="book" n="5" xml:id="Codi_5">
+            <head>Livre 5</head>
+            <pb n="64r" facs="https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0135/full/2000,2000/0/default.jpg"/>
+            <cb n="b"/>
+            <div type="chapter" n="5.1" xml:id="Codi_5.1">
+               <head xml:id="Codi_5.1.r" type="rubric" rend="red" ><label>5.1</label><foreign xml:lang="lat" cert="high">De sponsalibus</foreign>, <app type="substantive"><lem wit="#A #B">zo es</lem><rdg wit="#C" cause="dittography"><sic>son son</sic></rdg></app> de las <app type="orthographic"><lem wit="#A">fermarias</lem><rdg wit="#B">fermalias</rdg><rdg wit="#C">fermalas</rdg></app> de las <app type="orthographic"><lem wit="#A">moleranzas</lem><rdg wit="#B">molieransas</rdg><rdg wit="#C">moleransas</rdg></app>.</head>
+               <p xml:id="Codi_5.1.1"><label>5.1.1</label><hi rend="drop_cap">P</hi>oiss que nos avem dig d'aquelz negocis que li un ome fant ab los autres, si cum es <app type="orthographic"><lem wit="#A">vendedos</lem><rdg wit="#B">vendezos</rdg><rdg wit="#C">vendesons</rdg></app> o <app type="orthographic"><lem wit="#A">tenedos</lem><rdg wit="#B">tenezos</rdg><rdg wit="#C">tensions</rdg></app> e <app type="orthographic"><lem wit="#A">logados</lem><rdg wit="#B">logazos</rdg><rdg wit="#C">logasons</rdg></app>, ed autre assaz que om fai solament per respeig d'aver, ara digam <foreign xml:lang="lat" cert="unknown"><app type="orthographic"><lem wit="#A">de matrimonis</lem><rdg wit="#B">matrimoniis</rdg></app></foreign>, zo es de <app type="orthographic"><lem wit="#A">moilleranzas</lem><rdg wit="#B">molieransas</rdg><rdg wit="#C">moleransas</rdg></app>, que om no fai tant per respeig d'aver cum per respeig de se medeis.</p>
+               <p xml:id="Codi_5.1.2"><label>5.1.2</label>Si alcuns om vol prenre moiller, moutas causas i devunt esser esgardadas. Primeirament deu esser esgardatz li edaz d'amdos, zo es d'aquel qui vol prenre moiller e d'aquella que vol penre marit. Car nuillz om non pot <app type="substantive"><lem wit="#A #B">fermar</lem><rdg wit="#C">penre</rdg></app> moiller si el a meinz de .vii. anz <pb n="64v" facs="https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0136/full/2000,2000/0/default.jpg"/><cb n="a"/>, ni la femena <app type="substantive"><lem wit="#A #C">arregers</lem><rdg wit="#B">atressi</rdg></app> <app type="substantive"><lem wit="#A #B">non deu aver</lem><rdg wit="#C">si a</rdg></app> meinz de .vii. anz si ella vol fermar marit, o sia qu'el aia paire o sia que non. Ni non valran las <app type="orthographic"><lem wit="#A">fermaillas</lem><rdg wit="#B">fermalias</rdg><rdg wit="#C">fermalatz</rdg></app>, ed ancara en sia donada <app type="orthographic"><lem wit="#A">penora</lem><rdg wit="#B">peniora</rdg><rdg wit="#C">peinora</rdg></app> <app type="substantive"><lem wit="#A #B">o</lem><rdg wit="#C">e</rdg></app> <app type="orthographic"><lem wit="#A">fermanza</lem><rdg wit="#B #C">fermansa</rdg></app> o avers per <app type="orthographic"><lem wit="#A #B">arras</lem><rdg wit="#C">aras</rdg></app>, non val ren.</p>
+               <p xml:id="Codi_5.1.3"><label>5.1.3</label><app type="substantive"><lem wit="#A #C">Arregers</lem><rdg wit="#B">Atressi</rdg></app> nullz om no <app type="substantive"><lem wit="#A #B">la pot penre</lem><rdg wit="#C">pot penre moler</rdg></app> ancara la pusca el fermar si el es menre de .xiiii. anz. E la femna eussament non pot penre marit si ella es menre de .xii. anz, ancara posca ella fermar marit.</p>
+               <p xml:id="Codi_5.1.4"><label>5.1.4</label>Si aquill omen qui fermant moiller sunt menor de.l temps qu'es dig de sobre, zo es l'om de .xiiii. anz e la femena de .xii., <app type="substantive"><lem wit="#A #B">podunt se partir</lem><rdg wit="#C" cause="dittography">podon se partir <sic>podon se partir</sic></rdg></app> d'aquellas <app type="orthographic"><lem wit="#A">moilleranzas</lem><rdg wit="#B">molieransas</rdg><rdg wit="#C">moleransas</rdg></app> sens nuilla pena e ses <app type="orthographic"><lem wit="#A">peccat</lem><rdg wit="#B">pechat</rdg><rdg wit="#C">pecat</rdg></app>, si amdui o volunt o solament l'us, ancara en sia faiz <app type="orthographic"><lem wit="#A">sagramenz</lem><rdg wit="#B">sagremens</rdg><rdg wit="#C">sagrament</rdg></app> o en sia plevida fes. Mas si solament l'uns es menre de zo que nos avem dig desobre, zo es <app type="substantive"><lem wit="#A #B">l'om</lem><rdg wit="#C" cause="haplography"><sic>l’un</sic></rdg></app> de .xiiii. anz o la femena de .xii., e l'altre es <app type="substantive"><lem wit="#A #B">maier</lem><rdg wit="#C"/></app>, aquel qui es menre s'en pot <app type="substantive"><lem wit="#A"/><rdg wit="#B #C">ben</rdg></app> partir sens nuilla pena 
+                  <app type="substantive">
+                     <lem wit="#B">
+                        <orig>e ses nuil peccat. Eissament et aquel qui es majer de .xiiii. ans s'en pot partir ses nulia pena</orig>
+                        <reg resp="#FDuval">e ses nuill pecat. Arregers aquel qui es maier de .xiiii. anz s'en pot partir ses nuilla pena</reg>
+                     </lem>
+                     <rdg wit="#A #C" cause="homeoteleuton"/>
+                  </app> si ella i fon messa, e ses nuill <app type="orthographic"><lem wit="#A #B">peccat</lem><rdg wit="#C">pecat</rdg></app> que el non avra, ja sia zo que el o agues jurat per aço que el non laissa que la femna non prenda aissi cum avia jurat. E ja sia zo que lo reman en el, si la pot laissar si ella es menre de .xii. anz, ed ancara <cb n="b"/>sia el maier de .xiiii. anz, ed ancara o aia el jurat. Ed aço pot far sens nuilla pena, isters que el sera <app type="orthographic"><lem wit="#A">perjurs</lem><rdg wit="#B">prejurs</rdg><rdg wit="#C">perjuis</rdg></app> si el fei aquellas <app type="orthographic"><lem wit="#A">fermaillas</lem><rdg wit="#B">fermalias</rdg><rdg wit="#C">fermalas</rdg></app> per sagrament.</p>
+               <p xml:id="Codi_5.1.5"><label>5.1.5</label>Atrestals rados es de la part de la femena. Mas si ill sunt majors de .xxv. anz, certa pena <app type="substantive"><lem wit="#A #B"/><rdg wit="#C"><sic>n'</sic></rdg></app>es ordenada ad aquel qui la vol effraigner aquellas <app type="orthographic"><lem wit="#A">fermaillas</lem><rdg wit="#B">fermalias</rdg><rdg wit="#C">fermalas</rdg></app> que sunt faitas de <app type="orthographic"><lem wit="#A">moilleranzas</lem><rdg wit="#B">molieransas</rdg><rdg wit="#C">moleransas</rdg></app>. La pena es aitals : <app><lem wit="#A #B"/><rdg wit="#C">mais tot en sia pena promessa non val si arras non son donadas.</rdg></app>si aquel qui fermet la moiller es maier de .xxv. anz e reman en el qu'el no la.n vol penre, el devra perdre las <app type="orthographic"><lem wit="#A #B">arras</lem><rdg wit="#C">aras</rdg></app>, si el las i donet, e la <app type="orthographic"><lem wit="#A #C">peinora</lem><rdg wit="#B">peniora</rdg></app><app type="substantive"><lem wit="#A #B"/><rdg wit="#C" cause="dittography"><sic>e la peinora</sic></rdg></app>, si el i donet <app type="orthographic"><lem wit="#A #C">peinora</lem><rdg wit="#B">peniora</rdg></app>. Mas si en la femna reman qu'es maier de .xxv. anz, deu redre aço que pres de.l marit ed autrestant e non plus, si non i ag autre <app type="orthographic"><lem wit="#A">covenent</lem><rdg wit="#B">covent</rdg><rdg wit="#C">convinent</rdg></app> cant foron faitas las 
+                  <app type="substantive">
+                     <rdgGrp type="orthographic">
+                        <lem wit="#A">fermaillas</lem>
+                        <rdg wit="#B">fermalias</rdg>
+                     </rdgGrp>
+                     <rdg wit="#C">fermansa</rdg>
+                     <witDetail wit="#C" resp="#SBiay">Apparemment doté d'un sens générique de garantie dans les témoins A et B, le mot <foreign xml:lang="oco">fermansa</foreign> semble acquérir un sens spécialisé synonyme de <foreign xml:lang="oco">fermaillas</foreign> (fiançailles) dans le témoin C.</witDetail>
+                  </app>. Mas si fon tals <app type="orthographic"><lem wit="#A">covenenz</lem><rdg wit="#B">covens</rdg><rdg wit="#C">convinent</rdg></app> faiz en las <app type="orthographic"><lem wit="#A">fermaillas</lem><rdg wit="#B">fermalias</rdg><rdg wit="#C">fermalas</rdg></app>, cant la femna pres las arras o la <app type="orthographic"><lem wit="#A #C">peinora</lem><rdg wit="#B">peniora</rdg></app> o autre per li eis, que ella redes aço en .iiii. tanz, o ella o suns paire, si de la soa part reman la 
+                  <app type="substantive">
+                     <rdgGrp type="orthographic">
+                        <lem wit="#A">moilleranza</lem>
+                        <rdg wit="#B">molieransa</rdg>
+                        <rdg wit="#C">moleransa</rdg>
+                     </rdgGrp>
+                     <rdg wit="#C">fermala, so es la moleransa</rdg>
+                     <witDetail wit="#C" resp="#SBiay">Le sens de <foreign xml:lang="oco">fermala</foreign> semble ici flotter entre fiançailles et mariage</witDetail>
+                  </app> : val ben aquest <app type="orthographic"><lem wit="#A">covenenz</lem><rdg wit="#B">covens</rdg><rdg wit="#C">convinent</rdg></app> e pot ben lo mariz demandar aço que li fon covengut, si reman en la part de la femena que ella non lo pren. Mas si <app type="substantive"><lem wit="#A #B"/><rdg wit="#C"><sic>non</sic></rdg></app> fo <app type="orthographic"><lem wit="#A">covenenz</lem><rdg wit="#B">covens</rdg><rdg wit="#C">convinent</rdg></app> faiz de mais de .iiii. aitanz, no val aço qu'es dig de.l mais.</p>
+               <pb n="65r" facs="https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0137/full/2000,2000/0/default.jpg"/>
+               <cb n="a"/>
+               <p xml:id="Codi_5.1.6"><label>5.1.6</label>Aquel om qui es em poder de sun paire non deu penre moiller ses la voluntat de.l paire. E si el o fai, non val per radon si.l paire non o cossent poiss. Atrestals radons <app type="substantive"><lem wit="#B #C">es</lem><rdg wit="#A"/></app> si el es e.l poder de sun avi, qu'el non deu penre moiller ses la sua voluntat. Cals rados es de.l fill que es e.l poder <app type="substantive"><lem wit="#B #C">de son paire</lem><rdg wit="#A" cause="homeoteleuton"/></app> si el vol penre moiller, atrestals rados de la filla si ella vol penre marit : que ella non o pot faire mentre qu'ella es e.l poder de sun paire o de sun avi ses lo lor cossentiment.</p>
+               <p xml:id="Codi_5.1.7"><label>5.1.7</label>Atresi cum es vers que.l filz que es em poder sun paire o de sun avi non deu penre moiller ses <app type="substantive"><lem wit="#A #B">la</lem><rdg wit="#C" cause="dittography">la <sic>la</sic></rdg></app> lor voluntat, atressi es vers que.l paire ni l'avis non podunt forzar lor fill ni lor nebot de penre moiller, anz es obs que.l filz o cossentisca nominadament, si om vol que vailla lo <foreign xml:lang="lat" cert="high">matrimonis</foreign>, zo es la <app type="orthographic"><lem wit="#A">moilleranza</lem><rdg wit="#B">molieransa</rdg><rdg wit="#C">moleransa</rdg></app>.</p>
+               <p xml:id="Codi_5.1.8"><label>5.1.8</label>Altra radons es en la filia que es e.l poder de.l paire, car lo paire li pot donar marit ancara non o voilla ella, ed ella deu o cossentir a.l marit que li vol donar sos paire o sos avis, sol que aquel mariz sia <foreign xml:lang="lat" cert="low"><app type="orthographic"><lem wit="#A #C">onesta persona</lem><rdg wit="#B">honesta persona</rdg></app></foreign>, zo es aitals <app type="substantive"><lem wit="#A #B"/><rdg wit="#C">om</rdg></app> qui la covenia, zo es no sia <foreign xml:lang="lat" cert="high">infamis</foreign>. Car si el es <foreign xml:lang="lat" cert="high">infamis</foreign>, zo es si el non es leials om o honestz, <cb n="b"/><app type="substantive"><lem wit="#B"/><rdg wit="#A" cause="homeoteleuton"><sic>zo es</sic></rdg></app> non es destreita la filia de cossentir a.l paire.</p>
+            </div>
+         </div>
+         <div type="book" n="6" xml:id="Codi_6">
+            <head>Livre 6</head>
+            <pb n="76v" facs="https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0160/full/2000,2000/0/default.jpg"/>
+            <cb n="b"/>
+            <div type="chapter" n="6.1" xml:id="Codi_6.1">
+               <head xml:id="Codi_6.1.r" type="rubric" rend="red"><label>6.1</label><app type="substantive"><lem wit="#A #B">Aizi ditz</lem><rdg wit="#C">Ara digam</rdg></app> de.l sers <app type="substantive"><lem wit="#A #B">que</lem><rdg wit="#C"/></app> fugunt a lor senors.</head>
+               <p xml:id="Codi_6.1.1"><label>6.1.1</label><app type="substantive"><lem wit="#A #B"><hi rend="drop_cap">A</hi>ra digam de.ls sers que fugiunt a lors seinors</lem><rdg wit="#C">Ara digam de.ls seiors cant lur fuion lur sers</rdg></app> e de.ls libertis, mas primeirament devem saber cals es fugitius.</p>
+               <p xml:id="Codi_6.1.2"><label>6.1.2</label>Fugitius es aquel servs que fui a sson seinor o a sun magistre en tal voluntat que el mais non torn ad el, ancara mudes el pois sa voluntat ed el i tornes. <app type="substantive"><lem wit="#A #C">Arregers</lem><rdg wit="#B">Atressi</rdg></app> se el se rescondet e maison de son seinor per aço que el trobes occaison de fugir : ancara non fugis el, atrestal es cum se el agues fugit. <app type="substantive"><lem wit="#A #C">Arregers</lem><rdg wit="#B">Atressi</rdg></app> se uns sers fugia ed el <app type="substantive"><lem wit="#A #B">mudet</lem><rdg wit="#C"><sic>pudet</sic></rdg></app> <app type="substantive"><lem wit="#A"/><rdg wit="#B #C ">pois</rdg></app> sa voluntat, ed aucis se en alcuna mesura : atrestal es cum se el agues fugit. Aquella medeussa <app type="substantive"><lem wit="#A #B">radons</lem><rdg wit="#C" cause="dittography"><sic>razon</sic></rdg></app> es d'aquel que volia fugir e cora el comenzet a corre so seiner lo pres si que el non pog fugir. Atrestals radons es se mos servs anet en tal log dun eu non lo pusc aduire, si cum es se el anet a mos enemix.</p>
+               <p xml:id="Codi_6.1.3"><label>6.1.3</label>Se mos sers me fug, eu m'en pusc tornar ad aquel qui lo me donet o per vendedon o per camies. E posc me tornar ad aquel qui lo receup ed ad aquel qui li donet cosseill de fugir.</p>
+               <p xml:id="Codi_6.1.4"><label>6.1.4</label>Aquel om <pb n="77r" facs="https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0161/full/2000,2000/0/default.jpg"/><cb n="a"/> qui receup mo serv que me fugic, se el lo celet que el no volg que eu o saubes, ancara non saubes el que el era meus, se el sabia que el era fugitius, el lo me deu rendre ab autre serv atrestant bon o ab .xx. solz. E quantas vegadas el lo recebra, tantas vegadas en deu aver aquesta pena, se el lo te per .xx. dias que el non o manifestet ad aquel de cui el era ni en publico. E sobre tot aço el en es tenguz per laironici. E se el non pot pagar aquesta pena, la poestatz lo deu castigar segun lo seu uejaire.</p>
+               <p xml:id="Codi_6.1.5"><label>6.1.5</label>Se.l servs d'alcun <app type="substantive"><lem wit="#A"/><rdg wit="#B #C">om</rdg></app> fug a son seinor ed el se rescon e maison d'aquel omen qui es menre de <app type="substantive"><lem wit="#A">.xx.</lem><wit wit="#B #C">.xxv.</wit></app> anz, om lo pot demandar ad aquel en cui bailia es lo menre, zo es sos <app type="orthographic"><lem wit="#A #B">tuadors</lem><rdg wit="#C">tuaire</rdg></app> o suns <app type="orthographic"><lem wit="#A">curaors</lem><rdg wit="#B">curadors</rdg><rdg wit="#C">curaire</rdg></app>, en es tenguz ab atrestal pena cum es dita de sobre.</p>
+               <p xml:id="Codi_6.1.6"><label>6.1.6</label> <app type="substantive"><lem wit="#A #B">Se.l seiner de.l serv fugitiu ac mal engan en la fuga de son serv</lem><rdg  wit="#C"><sic>Si.l sers fugitius ac mal egan en la fuga de son senior</sic></rdg></app>, si cum es si el diss enaissi : <q>vai e fug e maison d'aital omen a cui eu voill mal</q>, e.l servs fugic per lo cosseill de son seinor, ed aço pot esser conogut <app type="substantive"><lem wit="#A #B">se val ren</lem><rdg wit="C"/></app> per lo deman que om en fara a.l serv, lo seiner lo deu perdre, e.l sers devra esser de.l fisco.</p>
+               <p xml:id="Codi_6.1.7"><label>6.1.7</label>Se aquel <cb n="b"/> en cui maison fugic lo sers d'altre diz que aquel sers es seus o ditz que el es franx, lo sers deu esser mes a torment que el diga la veritat se el <app type="substantive"><lem wit="#B #C">es</lem><rdg wit="#A"/></app> sers o franx ; e se el es sers que el diga de cui, <app type="substantive"><lem wit="#A #B">se</lem><rdg wit="#C"/></app> om non pot saber lo ver en altra guisa.</p>
+               <p xml:id="Codi_6.1.8"><label>6.1.8</label>Se alcus om diz que son serv li es fugiz ed el lo vol querre en maison d'alcun ome, non li o deu om vedar.</p>
+               <p xml:id="Codi_6.1.9"><label>6.1.9</label>E se lo sers d'alcun omen s'en fug, lo seiner non pot perdre lo dreig que el i a per meinz de .xxx. anz, <app type="substantive"><lem wit="#A #B">ni altre non o pot gadainar per meinz de .xxx. anz</lem><rdg wit="#C" cause="homeoteleuton"/></app>, ancara lo cumpres el d'autre per bona fei. Ed aço esdeven per aço que.l sers fai furt de se meteus cant el fuig.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+   <standOff>
+      <listBibl>
+         <biblStruct xml:id="edFitting">
+            <monogr>
+               <title>Lo Codi : eine Summa Codicis in provenzalischer Sprache aus der Mitte des XII. Jahrhunderts</title> <idno>https://catalogue.bnf.fr/ark:/12148/cb33305048h</idno>
+               <editor ref="https://data.bnf.fr/fr/12350220/hermann_fitting/"><forename>Hermann</forename> <surname>Fitting</surname></editor>
+               <editor ref="https://data.bnf.fr/ark:/12148/cb12519734x"><forename>Hermann</forename> <surname>Suchier</surname></editor>
+               <imprint>
+                  <pubPlace>
+                     Halle-sur-Saale</pubPlace>
+                  <publisher>Max Niemeyer</publisher>
+                  <date when="1906">1906</date>
+               </imprint>
+            </monogr>
+         </biblStruct>
+         <biblStruct xml:id="edDerrer" facs="http://www.romling.uni-tuebingen.de/codi/">
+            <monogr>
+               <title>Lo Codi : eine summa codicis in provenzalischer Sprache aus dem XII. Jahrhundert : die provenzalische Fassung der Handschrift A (Sorbonne 632), Vorarbeiten zu einer kritischen Textausgabe…</title>
+               <idno>https://catalogue.bnf.fr/ark:/12148/cb35393215r</idno>
+               <editor xml:id="FDerrer" ref="https://data.bnf.fr/ark:/12148/cb129113515"><forename>Felix</forename> <surname>Derrer</surname></editor>
+               <imprint>
+                  <pubPlace>Zürich</pubPlace>
+                  <publisher>Juris Verlag</publisher>
+                  <date when="1974">1974</date>
+               </imprint>
+            </monogr>
+         </biblStruct>
+         <biblFull xml:id="MiroirClassiques">
+            <titleStmt>
+               <title>Miroir des classiques</title>
+               <principal ref="#FDuval">Frédéric Duval</principal>
+               <respStmt>
+                  <resp>Réalisation de l'édition électronique</resp>
+                  <name><forename>Hélène</forename> <surname>Rochette-Castel</surname></name>
+               </respStmt>
+               <respStmt>
+                  <resp>Réalisation de l'édition électronique</resp>
+                  <name><forename>Hélène</forename> <surname>Gauthier</surname></name>
+               </respStmt>
+            </titleStmt>
+            <publicationStmt>
+               <publisher xml:id="ENC">
+                  <name>École nationale des chartes</name>
+                  <idno type="VIAF">134649805</idno>
+               </publisher>
+               <address>
+                  <country key="FR"/>
+                  <settlement type="city">Paris</settlement>
+                  <postCode>75002</postCode>
+                  <district type="arrondissement">2e arrondissement</district>
+                  <street><num>65</num>, rue de Richelieu</street>
+               </address>
+               <pubPlace>Paris</pubPlace>
+               <idno type="URI">http://elec.enc.sorbonne.fr/miroir_des_classiques/</idno>
+            </publicationStmt>
+         </biblFull>
+      </listBibl>
+   </standOff>
+</TEI>
