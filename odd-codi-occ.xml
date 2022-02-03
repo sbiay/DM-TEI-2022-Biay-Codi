@@ -20,10 +20,10 @@
          <publicationStmt>
             <authority ref="#SBiay"><forename>Sébastien</forename> <surname>Biay</surname></authority>
             <date when="2022-02-03">3 février 2022</date>
-            <idno type="URI">https://github.com/sbiay/DM-TEI-2022-Biay-CodiOccitan/blob/main/odd-codi-occ.xml</idno>
+            <idno type="URI">https://github.com/sbiay/DM-TEI-2022-Biay-Codi/blob/main/odd-codi-occ.xml</idno>
          </publicationStmt>
          <sourceDesc>
-            <p>ODD derivée de <idno type="URI">https://github.com/sbiay/DM-TEI-2022-Biay-CodiOccitan/blob/main/tei-codi-occ.xml</idno></p>
+            <p>ODD derivée de <idno type="URI">https://github.com/sbiay/DM-TEI-2022-Biay-Codi/blob/main/tei-codi-occ.xml</idno></p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
