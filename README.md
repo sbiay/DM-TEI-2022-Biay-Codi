@@ -1,7 +1,7 @@
 *Lo Codi* occitan
 ===
 
-![Début du Codi occitan, ms. Paris, Sorbonne, 632, f. 1](https://nubis.univ-paris1.fr/iiif/3/BIS_00_00878_0009/51,118,1850,1020/max/0/default.jpg)
+![Début du Codi occitan, ms. Paris, Sorbonne, 632, f. 1](./img/canvas.png)
 *Début du Codi occitan, ms. Paris, Sorbonne, 632, f. 1.*
 
 Ce dépôt contient une édition critique de trois extraits de la somme au Code de Justinien d'après les témoins manuscrits Paris, Sorbonne, 632, Paris, BNF, NAF 4138 et 4504 réalisée en XML-TEI dans le cadre du master Technologies numériques appliquées à l'histoire de l'Ecole nationale des chartes.
